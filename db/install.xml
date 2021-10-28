@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/ecommerce/db" VERSION="20210924" COMMENT="XMLDB file for Moodle local/ecommerce"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_ecommerce_product" COMMENT="each record is a product">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="id"/>
+        <FIELD NAME="name" TYPE="text" SEQUENCE="false" COMMENT="product_name"/>
+        <FIELD NAME="price" TYPE="int" LENGTH="10" SEQUENCE="false" COMMENT="product price"/>
+        <FIELD NAME="image" TYPE="text" SEQUENCE="false" COMMENT="product image"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+       </TABLE>
+
+       <TABLE NAME="local_ecommerce_user_detail" COMMENT="each record is a user info who bye a product">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="id"/>
+        <FIELD NAME="name" TYPE="text" SEQUENCE="false" COMMENT="user_name"/>
+        <FIELD NAME="email" TYPE="text" SEQUENCE="false" COMMENT="user email"/>
+        <FIELD NAME="phone" TYPE="text" SEQUENCE="false" COMMENT="user phone number"/>
+        <FIELD NAME="address" TYPE="text" SEQUENCE="false" COMMENT="user address"/>
+        <FIELD NAME="productid" TYPE="int" LENGTH="10"  SEQUENCE="false" COMMENT="product Id"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+       </TABLE>
+    </TABLES>
+</XMLDB>

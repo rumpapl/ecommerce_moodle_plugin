@@ -1,0 +1,57 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_ecommerce/addproduct
+
+   show product list
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+    * none
+
+    Example context (json):
+    {
+    
+    }
+}}
+
+
+
+
+ <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-3">
+    {{#productimg}}
+     <img class="img-thumbnail" src="{{productimg}}" alt="image">
+     {{/productimg}}
+     {{^productimg}}
+     <img class="img-thumbnail" src="../uploads/static/no_img.jpeg" alt="{{productimg}}">
+     {{/productimg}}
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-9 my-auto">
+        <h4>{{productname}}</h4>
+        <h5 class="text-success font-weight-bold">৳ {{productprice}}</h5>
+    </div>
+</div>
+<div class=" my-5 ">
+    <hr class="col-xs-12">
+</div>
+
